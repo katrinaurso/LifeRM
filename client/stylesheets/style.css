@@ -7,10 +7,12 @@ body {
 	height: 600px;
 	background-color: black;
 	display: inline-block;
+	vertical-align: top;
 }
 #contacts {
 	width: 200px;
 	height: 600px;
 	outline: 1px solid red;
 	display: inline-block;
+	vertical-align: top;
 }

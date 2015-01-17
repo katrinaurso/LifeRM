@@ -2,12 +2,29 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script>
+	<script type="text/javascript" src="/javascripts/app.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
-  <body>
+  <body ng-app="dashboard">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div id="content"></div>
-    <div id="contacts"></div>
+    <div id="contacts" ng-controller="Contacts">
+    	<h1>Contacts</h1>
+<!--     	<h4>Display</h4> -->
+<!--     	<ul>
+    		<li ng-repeat="contact in contacts" ng-bind="contact.name"></li>
+      </ul> -->
+      <div class="contacts" ng-repeat="contact in contacts">
+        <p ng-bind="contact.name"></p>
+      </div>
+      <h3>Add New Contact</h3>
+      <form>
+        <input type="text" ng-model="new_contact.name" placeholder="Contact Name">
+        <input type="submit" value="Add">
+      </form>
+    </div>
   </body>
 </html>
