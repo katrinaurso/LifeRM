@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#content {
+	width: 600px;
+	height: 600px;
+	background-color: black;
+	display: inline-block;
+}
+#contacts {
+	width: 200px;
+	height: 600px;
+	outline: 1px solid red;
+	display: inline-block;
+}
