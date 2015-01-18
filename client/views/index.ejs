@@ -19,8 +19,8 @@
 <!--     	<ul>
     		<li ng-repeat="contact in contacts" ng-bind="contact.name"></li>
       </ul> -->
-      <div class="contacts" ng-repeat="contact in contacts">
-        <p ng-bind="contact.name"></p>
+      <div class="contact_list" ng-repeat="contact in contacts">
+        <a href="#"><p ng-bind="contact.name"></p></a>
       </div>
       <h3>Add New Contact</h3>
       <form ng-submit="addContact()">
