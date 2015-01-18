@@ -12,7 +12,7 @@
   <body ng-app="dashboard">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <div id="content"></div>
+    <!-- <div id="content"></div> -->
     <div id="contacts" ng-controller="Contacts">
     	<h1>Contacts</h1>
 <!--     	<h4>Display</h4> -->
@@ -22,11 +22,11 @@
       <div class="contacts" ng-repeat="contact in contacts">
         <p ng-bind="contact.name"></p>
       </div>
-      <!-- <h3>Add New Contact</h3>
-      <form ng-submit="createContact()">
+      <h3>Add New Contact</h3>
+      <form ng-submit="addContact()">
         <input type="text" ng-model="new_contact.name" placeholder="Contact Name">
         <input type="submit" value="Add">
-      </form> -->
+      </form>
     </div>
   </body>
 </html>
