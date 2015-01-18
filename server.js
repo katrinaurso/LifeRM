@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client')));
 
-var routes = require('./config/routes.js')(app);
+var routes = require('./server/config/routes.js')(app);
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
