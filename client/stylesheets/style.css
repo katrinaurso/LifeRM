@@ -4,14 +4,14 @@
 }*/
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  width: 800px;
+  width: 825px;
   height: 700px;
   margin: 0 auto;
   background-color: lightgray;
 }
 #container {
 	height: 700px;
-	width: 800px;
+	width: 825px;
 }
 #content {
 	width: 600px;
@@ -85,12 +85,14 @@ h3 {
 }
 
 #contacts {
-	width: 200px;
+	width: 225px;
 	height: 600px;
 	outline: 1px solid red;
 	display: inline-block;
 	vertical-align: top;
 	background-color: white;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 h1.letter {
 	background-color: darkblue;
@@ -113,7 +115,6 @@ img {
 	vertical-align: top;
 }
 p.contact_list {
-	width: 100px;
 	height: 50px;
 	display: inline-block;
 	margin: 0;

@@ -5,10 +5,11 @@ dashboard.controller('Contacts', function($scope, ContactFactory){
 	ContactFactory.getContacts(function(data){
 		$scope.contacts = data;
 	});
+	$scope.errors = ContactFactory.getErrors();
 });
 
-dashboard.controller('Main', function($scope) {
-	// $scope.getData(function(data){
-	// 	$scope.data = 'Data';
-	// });
+dashboard.controller('Main', function($scope, MainFactory){
+	MainFactory.getPictures(function(data){
+		$scope.pictures = data;
+	});
 });

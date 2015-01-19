@@ -1,6 +1,8 @@
  		<div ng-controller="Main">
 			<div id="collage">
-				<div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div><div class="image"></div>
+				<a ng-repeat="picture in pictures" ng-href="#/contact"><!--
+					--><img class="image" ng-src="{{picture.picture}}"><!--
+				--></a>
 	        </div>
 	        <div id="action_plan_tasks">
 	          <h3>Action Plan Tasks (The Que)</h3>

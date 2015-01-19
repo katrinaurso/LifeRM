@@ -2,11 +2,12 @@ var dashboard = angular.module('dashboard', ['ngRoute']);
 dashboard.config(function($routeProvider){
 	$routeProvider
 	.when('/', {
-		templateUrl: 'views/partials/main.html'
-		// controller: 'Main'
+		templateUrl: 'views/partials/main.html',
+		controller: 'Main'
 	});
 	// .when('/contact', {templateUrl: 'partials/main.html'});
 });
+
 
 
 
@@ -20,6 +21,6 @@ dashboard.config(function($routeProvider){
 // 			templateUrl: 'partials/main.html'
 // 		});
 // });
- dashboard.config(['$compileProvider', function($compileProvider) {
-    $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
-}]);
+//  dashboard.config(['$compileProvider', function($compileProvider) {
+//     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
+// }]);
