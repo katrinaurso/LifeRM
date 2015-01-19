@@ -10,7 +10,7 @@ var app = express();
 
 app.set('views', path.join(__dirname, 'client/views'));
 app.set('view engine', 'ejs');
-app.set('images', path.join(__dirname, 'client/images'));
+// app.set('images', path.join(__dirname, 'client/images'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

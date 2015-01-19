@@ -16,3 +16,9 @@ dashboard.factory('ContactFactory', function($http){
 	}
 	return factory;
 });
+
+dashboard.factory('MainFactory', function($http){
+	var factory = {};
+	factory.getData = 'You got something';
+	return factory;
+})

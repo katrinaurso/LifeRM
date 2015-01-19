@@ -6,3 +6,9 @@ dashboard.controller('Contacts', function($scope, ContactFactory){
 		$scope.contacts = data;
 	});
 });
+
+dashboard.controller('Main', function($scope) {
+	// $scope.getData(function(data){
+	// 	$scope.data = 'Data';
+	// });
+});
