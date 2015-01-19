@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 var Contact = mongoose.model('Contact');
 /// Testing for image upload ///
-var uuid = require('node-uuid'),
-	multiparty = require('multiparty'),
-	fs = require('fs');
+// var uuid = require('node-uuid'),
+// 	multiparty = require('multiparty'),
+// 	fs = require('fs');
 
 module.exports = {
 	index: function(req, res){

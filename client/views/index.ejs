@@ -19,13 +19,13 @@
     </div><!-- Comment to remove space
  --><div id="contacts" ng-controller="Contacts">
     	<h1>Contacts</h1>
-      <h4>Display</h4>
-      <ul>
-    		<li><a href="#">All</a></li>
-        <li><a href="#">Favorites</a></li>
-        <li><a href="#">Groups</a></li>
-      </ul>
-      <h1 class="letter">A</h1>
+      <h4 class="contacts">Display</h4>
+      <select>
+        <option value="all" ng-selected="selected">All</option>
+        <option value="favorites">Favorites</option>
+        <option value="groups">Groups</option>
+      </select>
+      <a ng-href="#new_contact"><h1 class="letter">+</h1></a>
       <div class="contact_list" ng-repeat="contact in contacts | orderBy: 'first_name'" ng-click="view_contact(contact.id)">
         <img class="contact_list" ng-src="{{contact.picture}}" ng-alt="contact.first_name">
         <a ng-href="#contact">
@@ -35,11 +35,12 @@
       <!-- Letter for each name will pop up here with contacts that start with that letter below -->
       <!-- Letters will be links to the letter menu and can take you to that letter from there -->
       <!-- all contact info will be a link to that contact -->
-      <h1 class="letter">B</h1>
+      <h1 class="letter">A</h1>
       <div class="contact_list">
         <img class="contact_list" ng-src="/images/test.jpg">
         <p class="contact_list">Contact Name</p>
       </div>
+      <h1 class="letter">B</h1>
       <h1 class="letter">C</h1>
       <h3>Add New Contact</h3>
       <form ng-submit="addContact()">

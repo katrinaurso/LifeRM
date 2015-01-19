@@ -4,13 +4,14 @@ dashboard.config(function($routeProvider){
 	.when('/', {
 		templateUrl: 'views/partials/main.html',
 		controller: 'Main'
+	})
+	.when('/contact/:id', {
+		templateUrl: 'views/partials/contact.html',
+		controller: 'myContact'
 	});
-	// .when('/contact', {templateUrl: 'partials/main.html'});
 });
 
-
-
-
+var contacts = [];
 /// Test Section /////
 // var dashboard = angular.module('dashboard', ['ui-router']);
 // dashboard.config(function($stateProvider, $urlRouterProvider){

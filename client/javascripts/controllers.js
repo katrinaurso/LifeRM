@@ -9,7 +9,14 @@ dashboard.controller('Contacts', function($scope, ContactFactory){
 });
 
 dashboard.controller('Main', function($scope, MainFactory){
-	MainFactory.getPictures(function(data){
-		$scope.pictures = data;
-	});
+	$scope.pictures = contacts;
+});
+
+dashboard.controller('myContact', function($scope){
+	$scope.init = function(id){
+		$scope.id = id;
+	}
+	// myContactFactory.getContactInfo(function(data){
+	// 	$scope.contactInfo = data;
+	// });
 });

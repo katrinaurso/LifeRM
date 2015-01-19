@@ -10,31 +10,29 @@ body {
   background-color: lightgray;
 }
 #container {
-	height: 700px;
+	height: 600px;
 	width: 825px;
+	border: 2px solid black;
 }
 #content {
 	width: 600px;
 	height: 600px;
 	display: inline-block;
 	vertical-align: top;
-	outline: 1px solid red;
 }
 #collage {
 	height: 300px;
-	background-color: black;
+	background-color: orange;
 	display: block;
-	outline: 1px solid red;
 }
 .image {
-	height: 75px;
-	width: 75px;
+	height: 150px;
+	width: 150px;
 	background-color: green;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 	vertical-align: top;
-	outline: 1px solid red;
 }
 #action_plan_tasks {
 	height: 150px;
@@ -85,28 +83,33 @@ h3 {
 }
 
 #contacts {
-	width: 225px;
+	width: 215px;
 	height: 600px;
-	outline: 1px solid red;
+	padding-left: 10px;
 	display: inline-block;
 	vertical-align: top;
 	background-color: white;
 	overflow-y: auto;
 	overflow-x: hidden;
 }
+h4.contacts {
+	display: inline-block;
+	width: 75px;
+	margin-top: 0;
+}
 h1.letter {
 	background-color: darkblue;
 	width: 30px;
 	height: 30px;
-	margin: 0;
+	margin: 3px;
+	border-radius: 3px;
 	text-align: center;
-	outline: 1px solid red;
+	color: white;
 }
 div.contact_list {
-	background-color: lightgreen;
-	display: block;
+/*	background-color: lightgreen;
+*/	display: block;
 	padding: 3px;
-	outline: 1px solid red;
 }
 img {
 	height: 50px;
@@ -115,8 +118,9 @@ img {
 	vertical-align: top;
 }
 p.contact_list {
-	height: 50px;
+	padding-top: 10px;
 	display: inline-block;
 	margin: 0;
 	vertical-align: top;
+	font-style: bold;
 }

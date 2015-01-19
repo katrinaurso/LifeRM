@@ -1,6 +1,5 @@
 dashboard.factory('ContactFactory', function($http){
 	var factory = {};
-	var contacts = [];
 	var errors = [];
 	factory.getContacts = function(callback){ // Something is super not right here...
 		$http.get('/get_contacts').success(function(output){
@@ -32,13 +31,17 @@ dashboard.factory('ContactFactory', function($http){
 
 dashboard.factory('MainFactory', function($http){
 	var factory = {};
-	var pictures = [];
-	factory.getPictures = function(callback){
-		$http.get('/get_pictures').success(function(output){
-			pictures = output;
-			callback(pictures);
-		});
+	return factory;
+});
 
+dashboard.factory('myContactFactory', function($http){
+	var factory = {};
+	var contact = [];
+	factory.getContactInfo = function(callback){
+		$http.get('/get_contact_info').success(function(output){
+			contact = output;
+			callback(contact);
+		});
 	};
 	return factory;
-})
+});
