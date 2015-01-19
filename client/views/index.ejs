@@ -25,8 +25,9 @@
         <option value="favorites">Favorites</option>
         <option value="groups">Groups</option>
       </select>
-      <a ng-href="#new_contact"><h1 class="letter">+</h1></a>
-      <div class="contact_list" ng-repeat="contact in contacts | orderBy: 'first_name'" ng-click="view_contact(contact.id)">
+      <a ng-href="#new_contact"><h1 class="letter add">+</h1></a>
+      <input class="search" type="text" ng-model="filter_name" placeholder="Search Contacts"> <!-- Search bar is almost working perfect -->
+      <div class="contact_list" ng-repeat="contact in contacts | filter: filter_name | orderBy: 'first_name'" ng-click="view_contact(contact.id)">
         <img class="contact_list" ng-src="{{contact.picture}}" ng-alt="contact.first_name">
         <a ng-href="#contact">
           <p class="contact_list" ng-bind="contact.first_name+' '+contact.last_name"></p>
@@ -42,13 +43,13 @@
       </div>
       <h1 class="letter">B</h1>
       <h1 class="letter">C</h1>
-      <h3>Add New Contact</h3>
+      <!-- <h3>Add New Contact</h3>
       <form ng-submit="addContact()">
         <input type="text" ng-model="new_contact.first_name" placeholder="Contact First Name">
         <input type="text" ng-model="new_contact.last_name" placeholder="Contact Last Name">
         <input type="submit" value="Add">
         <p ng-repeat="error in errors" ng-bind="error.message"></p>
-      </form>
+      </form> -->
     </div>
   </div>
 </body>

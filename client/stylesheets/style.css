@@ -82,6 +82,14 @@ h3 {
 	vertical-align: top;
 }
 
+/* Add Contact */
+#new_contact {
+	padding: 20px;
+	background-color: lightblue;
+	outline: 1px solid red;
+}
+
+/* Contacts side bar */
 #contacts {
 	width: 215px;
 	height: 600px;
@@ -94,11 +102,11 @@ h3 {
 }
 h4.contacts {
 	display: inline-block;
-	width: 75px;
+	width: 100px;
 	margin-top: 0;
 }
 h1.letter {
-	background-color: darkblue;
+	background-color: black;
 	width: 30px;
 	height: 30px;
 	margin: 3px;
@@ -106,9 +114,16 @@ h1.letter {
 	text-align: center;
 	color: white;
 }
+.search {
+	margin: 0 0 5px 15px;
+	width: 125px;
+	vertical-align: top;
+}
+h1.add {
+	display: inline-block;
+}
 div.contact_list {
-/*	background-color: lightgreen;
-*/	display: block;
+	display: block;
 	padding: 3px;
 }
 img {
