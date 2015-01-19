@@ -1,1 +1,21 @@
-<h1>Hello</h1>
+<script>
+$(document).ready(function(){
+	alert('working');
+	for(i=0; i<32; i++){
+      $('#collage').append('<div class="image"></div>');
+    }	
+});
+
+ </script> 
+ 		<div ng-controller="MainController">
+			<div id="collage">
+	        </div>
+	        <div id="action_plan_tasks">
+	          <h3>Action Plan Tasks (The Que)</h3>
+	          <input type="checkbox">Katrina's Birthday
+	        </div>
+	        <div id="upcoming_reminders">
+	          <h3>Upcomming Reminders</h3>
+	          <input type="checkbox">Patrick's Birthday <span class="alert">4 days</span>
+	        </div>
+	    </div>

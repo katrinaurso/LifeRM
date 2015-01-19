@@ -11,32 +11,21 @@
   <script type="text/javascript" src="/javascripts/factories.js"></script>
 <!-- link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="/stylesheets/style.css">
-  <script type="text/javascript">
-  $(document).ready(function(){
-    for(i=0; i<32; i++){
-      $('#collage').append('<div class="image"></div>');
-    } 
-  });
-    
-  </script> 
+      <script type="text/javascript">
+      $(document).ready(function(){
+        
+      });
+        
+     </script> 
 </head>
   <body ng-app="dashboard">
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <div id="container">
       <div id="content">
-      <!-- <div ui-view=""> -->
-        <div id="collage">
+        <div ng-view="">
+          
         </div>
-        <div id="action_plan_tasks">
-          <h3>Action Plan Tasks (The Que)</h3>
-          <input type="checkbox">Katrina's Birthday
-        </div>
-        <div id="upcoming_reminders">
-          <h3>Upcomming Reminders</h3>
-          <input type="checkbox">Patrick's Birthday <span class="alert">4 days</span>
-        </div>
-      <!-- </div> -->
       </div><!-- Comment to remove space
    --><div id="contacts" ng-controller="Contacts">
       	<h1>Contacts</h1>

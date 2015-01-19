@@ -1,12 +1,12 @@
 var dashboard = angular.module('dashboard', ['ngRoute']);
-// dashboard.config(function($routeProvider){
-// 	$routeProvider
-// 	.when('/', {
-// 		templateUrl: 'partials/main.html',
-// 		controller: 'ContactController'
-// 	})
-// 	.when('/contact', {templateUrl: 'partials/main.html'});
-// });
+dashboard.config(function($routeProvider){
+	$routeProvider
+	.when('/', {
+		templateUrl: 'views/partials/main.html',
+		controller: 'MainController'
+	})
+	.when('/contact', {templateUrl: 'partials/main.html'});
+});
 
 
 /// Test Section /////
