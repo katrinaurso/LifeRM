@@ -6,15 +6,15 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.js"></script>
       <!-- <script src="angular-ui-routerjs"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="/javascripts/app.js"></script>
+  <script type="text/javascript" src="/javascripts/app.js"></script>
   <script type="text/javascript" src="/javascripts/controllers.js"></script>
   <script type="text/javascript" src="/javascripts/factories.js"></script>
 <!-- link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script type="text/javascript">
   $(document).ready(function(){
-    for(i=0; i<32; i++){
-      $('#collage').append('<div class="image"></div>');
+    for(i=0; i<16; i++){
+      $('#contact_collage').append('<div class="image"></div>');
     } 
   });
     
@@ -26,41 +26,38 @@
     <div id="container">
       <div id="content">
       <!-- <div ui-view=""> -->
-        <div id="collage">
-        </div>
-        <div id="action_plan_tasks">
+        <div id="contact_collage">
+        </div><!-- Comment to remove space
+     --><div id="contact_info">
+          <h2>Contact Info</h2>
+          <h3>Katrina Sanford</h3>
+          <h4>Info: ...</h4>
+          <p>Phone: 70251806942</p>
+          <p>Address: 4600 Davis Ave S Apt B103</p>
+          <h4>Social Media Links:</p>
+          <h4>Groups:</h4>
+        </div><!-- Comment to remove space
+     --><div id="action_plans">
           <h3>Action Plan Tasks (The Que)</h3>
           <input type="checkbox">Katrina's Birthday
         </div>
-        <div id="upcoming_reminders">
+        <div id="notes_docs">
           <h3>Upcomming Reminders</h3>
           <input type="checkbox">Patrick's Birthday <span class="alert">4 days</span>
         </div>
       <!-- </div> -->
       </div><!-- Comment to remove space
    --><div id="contacts" ng-controller="Contacts">
-      	<h1>Contacts</h1>
+        <h1>Contacts</h1>
         <h4>Display</h4>
         <ul>
-      		<li><a href="#">All</a></li>
+          <li><a href="#">All</a></li>
           <li><a href="#">Favorites</a></li>
           <li><a href="#">Groups</a></li>
         </ul>
-        <h1 class="letter">A</h1>
         <div class="contact_list" ng-repeat="contact in contacts">
-            <img class="contact_list" ng-src="/images/test.jpg" alt="test">
-           <a ng-href="#contact"> <p class="contact_list" ng-bind="contact.name"></p>
-          </a>
+          <a ng-href="#contact"><p ng-bind="contact.name"></p></a>
         </div>
-        <!-- Letter for each name will pop up here with contacts that start with that letter below -->
-        <!-- Letters will be links to the letter menu and can take you to that letter from there -->
-        <!-- all contact info will be a link to that contact -->
-        <h1 class="letter">B</h1>
-        <div class="contact_list">
-          <img class="contact_list" src="https://www.google.com/images/srpr/logo11w.png">
-          <p class="contact_list">Contact Name</p>
-        </div>
-        <h1 class="letter">C</h1>
         <h3>Add New Contact</h3>
         <form ng-submit="addContact()">
           <input type="text" ng-model="new_contact.name" placeholder="Contact Name">

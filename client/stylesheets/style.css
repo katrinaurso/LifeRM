@@ -1,18 +1,119 @@
+/** {
+	margin: 0;
+	padding: 0;
+}*/
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 800px;
+  height: 700px;
+  margin: 0 auto;
+}
+#container {
+	height: 700px;
+	width: 800px;
 }
 #content {
 	width: 600px;
 	height: 600px;
+	display: inline-block;
+	vertical-align: top;
+	outline: 1px solid red;
+}
+#collage {
+	height: 300px;
+	background-color: black;
+	display: block;
+	outline: 1px solid red;
+}
+.image {
+	height: 75px;
+	width: 75px;
+	background-color: green;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	outline: 1px solid red;
+}
+#action_plan_tasks {
+	height: 150px;
+	background-color: yellow;
+	display: block;
+	outline: 1px solid red;
+/*	padding: 10px;
+*/}
+h3 {
+	margin-top: 0;
+}
+#upcoming_reminders {
+	height: 150px;
+	background-color: pink;
+	vertical-align: top;
+	outline: 1px solid red;
+
+}
+
+#contact_collage {
+	height: 300px;
+	width: 300px;
 	background-color: black;
 	display: inline-block;
 	vertical-align: top;
+	outline: 1px solid red;
 }
+#contact_info {
+	height: 300px;
+	width: 300px;
+	background-color: blue;
+	display: inline-block;
+	vertical-align: top;
+	outline: 1px solid red;
+}
+#action_plans {
+	background-color: yellow;
+	height: 100px;
+	display: block;
+	vertical-align: top;
+	outline: 1px solid red;
+}
+#notes_docs {
+	height: 200px;
+	background-color: pink;
+	outline: 1px solid red;
+	vertical-align: top;
+}
+
 #contacts {
 	width: 200px;
 	height: 600px;
 	outline: 1px solid red;
 	display: inline-block;
+	vertical-align: top;
+}
+h1.letter {
+	background-color: darkblue;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	text-align: center;
+	outline: 1px solid red;
+}
+div.contact_list {
+	background-color: lightgreen;
+	display: block;
+	padding: 3px;
+	outline: 1px solid red;
+}
+img {
+	height: 50px;
+	width: 70px;
+	display: inline-block;
+	vertical-align: top;
+}
+p.contact_list {
+	width: 100px;
+	height: 50px;
+	display: inline-block;
+	margin: 0;
 	vertical-align: top;
 }
