@@ -47,8 +47,8 @@
           <li><a href="#">Groups</a></li>
         </ul>
         <h1 class="letter">A</h1>
-        <div class="contact_list" ng-repeat="contact in contacts">
-            <img class="contact_list" ng-src="/images/test.jpg" alt="test">
+        <div class="contact_list" ng-repeat="contact in contacts" ng-click="view_contact(contact.id)">
+            <img class="contact_list" ng-src="http://depts.washington.edu/lsamp/images/profile_plummer.jpg" alt="test">
            <a ng-href="#contact"> <p class="contact_list" ng-bind="contact.name"></p>
           </a>
         </div>

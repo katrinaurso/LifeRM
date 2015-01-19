@@ -7,6 +7,7 @@ body {
   width: 800px;
   height: 700px;
   margin: 0 auto;
+  background-color: lightgray;
 }
 #container {
 	height: 700px;
@@ -89,6 +90,7 @@ h3 {
 	outline: 1px solid red;
 	display: inline-block;
 	vertical-align: top;
+	background-color: white;
 }
 h1.letter {
 	background-color: darkblue;
@@ -106,7 +108,7 @@ div.contact_list {
 }
 img {
 	height: 50px;
-	width: 70px;
+	width: 50px;
 	display: inline-block;
 	vertical-align: top;
 }
