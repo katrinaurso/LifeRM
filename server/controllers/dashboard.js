@@ -36,6 +36,15 @@ module.exports = {
 				res.send(results);
 			}
 		});
+	},
+	get_contact_info: function(req, res){
+		Contact.find({_id : req.params.id}, function(err, results){
+			if(err){
+				res.send(err);
+			} else {
+				res.send(results);
+			}
+		});
 	}
 	// , upload: function(req, res){
 	// 	var form = new multiparty.Form();

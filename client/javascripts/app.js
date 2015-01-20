@@ -11,7 +11,7 @@ dashboard.config(function($routeProvider){
 	})
 	.when('/contact/:id', {
 		templateUrl: 'views/partials/contact.html',
-		controller: 'myContact'
+		controller: 'MyContact'
 	});
 });
 

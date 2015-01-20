@@ -46,13 +46,14 @@ dashboard.factory('NewContactFactory', function($http){
 	return factory;
 });
 
-dashboard.factory('myContactFactory', function($http){
+dashboard.factory('MyContactFactory', function($routeParams, $http){
 	var factory = {};
 	var contact = [];
-	factory.getContactInfo = function(callback){
-		$http.get('/get_contact_info').success(function(output){
+	factory.getContactInfo = function(id){ // object is deep in another object....
+		$http.get('/get_contact_info/'+id).success(function(output){
 			contact = output;
-			callback(contact);
+			console.log(contact[0]);
+			return contact[0];		
 		});
 	};
 	return factory;

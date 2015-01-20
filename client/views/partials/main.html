@@ -1,7 +1,7 @@
  		<div ng-controller="Main">
 			<div id="collage">
-				<a ng-repeat="picture in pictures" ng-href="#/contact"><!--
-					--><img class="image" ng-src="{{picture.picture}}"><!--
+				<a ng-repeat="person in contacts" ng-href="#/contact/{{person._id}}"><!--
+					--><img class="image" ng-src="{{person.picture}}"><!--
 				--></a>
 	        </div>
 	        <div id="action_plan_tasks">

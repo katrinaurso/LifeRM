@@ -1,8 +1,10 @@
+        <div ng-controller="MyContact">
+
         <div id="contact_collage">
         </div><!-- Comment to remove space
-     --><div id="contact_info">
+     --><div id="contact_info" >
           <h2>Contact Info</h2>
-          <h3>Katrina Sanford</h3>
+          <h3 ng-bind="contact.first_name">{{ contact.first_name }}</h3>
           <h4>Info: ...</h4>
           <p>Phone: 70251806942</p>
           <p>Address: 4600 Davis Ave S Apt B103</p>
@@ -17,3 +19,5 @@
           <h3>Upcomming Reminders</h3>
           <input type="checkbox">Patrick's Birthday <span class="alert">4 days</span>
         </div>
+     
+      </div>

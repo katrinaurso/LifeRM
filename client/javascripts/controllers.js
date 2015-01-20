@@ -13,7 +13,7 @@ dashboard.controller('Main', function($scope, MainFactory){
 			pictures.push(array[random]);
 			array.splice(random, 1);
 		}
-		$scope.pictures = pictures;
+		$scope.contacts = pictures;
 	});
 });
 
@@ -23,11 +23,6 @@ dashboard.controller('NewContact', function($scope, NewContactFactory){
 	};
 });
 
-dashboard.controller('myContact', function($scope){
-	$scope.init = function(id){
-		$scope.id = id;
-	}
-	// myContactFactory.getContactInfo(function(data){
-	// 	$scope.contactInfo = data;
-	// });
+dashboard.controller('MyContact', function($scope, $routeParams, MyContactFactory){
+	$scope.contact = MyContactFactory.getContactInfo($routeParams.id);
 });
