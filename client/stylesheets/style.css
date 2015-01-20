@@ -22,7 +22,6 @@ body {
 }
 #collage {
 	height: 300px;
-	background-color: orange;
 	display: block;
 }
 .image {
@@ -52,21 +51,25 @@ h3 {
 
 }
 
+/* View Contact */
 #contact_collage {
 	height: 300px;
 	width: 300px;
 	background-color: black;
 	display: inline-block;
 	vertical-align: top;
-	outline: 1px solid red;
 }
-#contact_info {
+img.contact_image {
 	height: 300px;
 	width: 300px;
-	background-color: blue;
+}
+#contact_info {
+	height: 260px;
+	width: 260px;
+	padding: 20px;
+	background-color: lightblue;
 	display: inline-block;
 	vertical-align: top;
-	outline: 1px solid red;
 }
 #action_plans {
 	background-color: yellow;

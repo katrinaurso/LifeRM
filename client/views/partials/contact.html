@@ -1,10 +1,10 @@
         <div ng-controller="MyContact">
 
         <div id="contact_collage">
+          <img class="contact_image" ng-src="{{contact.picture}}">
         </div><!-- Comment to remove space
      --><div id="contact_info" >
-          <h2>Contact Info</h2>
-          <h3 ng-bind="contact.first_name">{{ contact.first_name }}</h3>
+          <h2 ng-bind="contact.first_name+' '+contact.last_name"></h2>
           <h4>Info: ...</h4>
           <p>Phone: 70251806942</p>
           <p>Address: 4600 Davis Ave S Apt B103</p>

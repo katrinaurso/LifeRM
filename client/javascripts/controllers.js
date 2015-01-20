@@ -24,5 +24,7 @@ dashboard.controller('NewContact', function($scope, NewContactFactory){
 });
 
 dashboard.controller('MyContact', function($scope, $routeParams, MyContactFactory){
-	$scope.contact = MyContactFactory.getContactInfo($routeParams.id);
+	MyContactFactory.getContactInfo($routeParams.id, function(data){
+		$scope.contact = data;
+	});
 });

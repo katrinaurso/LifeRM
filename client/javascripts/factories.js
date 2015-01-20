@@ -49,11 +49,10 @@ dashboard.factory('NewContactFactory', function($http){
 dashboard.factory('MyContactFactory', function($routeParams, $http){
 	var factory = {};
 	var contact = [];
-	factory.getContactInfo = function(id){ // object is deep in another object....
+	factory.getContactInfo = function(id, callback){
 		$http.get('/get_contact_info/'+id).success(function(output){
 			contact = output;
-			console.log(contact[0]);
-			return contact[0];		
+			callback(contact[0]);		
 		});
 	};
 	return factory;
