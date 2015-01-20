@@ -27,12 +27,10 @@
       </select>
       <a ng-href="#new_contact"><h1 class="letter add">+</h1></a>
       <input class="search" type="text" ng-model="filter_name" placeholder="Search Contacts"> <!-- Search bar is almost working perfect -->
-      <div class="contact_list" ng-repeat="contact in contacts | filter: filter_name | orderBy: 'first_name'" ng-click="view_contact(contact.id)">
-        <img class="contact_list" ng-src="{{contact.picture}}" ng-alt="contact.first_name">
-        <a ng-href="#contact">
-          <p class="contact_list" ng-bind="contact.first_name+' '+contact.last_name"></p>
-        </a>
-      </div>
+      <a class="contact_list" ng-repeat="contact in contacts | filter: filter_name | orderBy: 'first_name'" ng-href="#/contact/{{contact._id}}">
+        <img class="contact_list" ng-src="{{contact.picture}}" ng-alt="contact.first_name"><!-- Comment to remove space
+     --><p class="contact_list" ng-bind="contact.first_name+' '+contact.last_name"></p>
+      </a>
       <!-- Letter for each name will pop up here with contacts that start with that letter below -->
       <!-- Letters will be links to the letter menu and can take you to that letter from there -->
       <!-- all contact info will be a link to that contact -->

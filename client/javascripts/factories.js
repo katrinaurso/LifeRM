@@ -57,13 +57,12 @@ dashboard.factory('MyContactFactory', function($routeParams, $http){
 		});
 	};
 	factory.removeContact = function(id){
-		$http.get('/remove_contact/'+id).success(function(status){
-			for(var i = 0; i<contacts.length; i++){
-				if(contacts[i]._id === id) {
-					contacts.splice(i, 1);
-				}
+		$http.get('/remove_contact/'+id);
+		for(var i = 0; i<contacts.length; i++){
+			if(contacts[i]._id === id) {
+				contacts.splice(i, 1);
 			}
-		});
+		}
 	};
 	return factory;
 });

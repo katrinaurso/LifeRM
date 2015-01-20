@@ -48,12 +48,10 @@ module.exports = {
 	},
 	remove_contact: function(req, res){
 		console.log(req.params.id);
-		Contact.remove({_id: req.params.id}, function(status){
-			if(err){
-				console.log(err);
-				res.sendStatus(err);
+		Contact.remove({_id: req.params.id}, function(err, status){
+			if(err) {
+				res.send(err);
 			} else {
-				console.log(status);
 				res.sendStatus(status);
 			}
 		});

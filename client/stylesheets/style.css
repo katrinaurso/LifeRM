@@ -141,9 +141,10 @@ h1.letter {
 h1.add {
 	display: inline-block;
 }
-div.contact_list {
+a.contact_list {
 	display: block;
 	padding: 3px;
+	color: blue;
 }
 img {
 	height: 50px;
@@ -152,7 +153,7 @@ img {
 	vertical-align: top;
 }
 p.contact_list {
-	padding-top: 10px;
+	padding: 10px 0 0 5px;
 	display: inline-block;
 	margin: 0;
 	vertical-align: top;

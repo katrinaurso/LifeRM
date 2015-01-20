@@ -24,12 +24,12 @@ dashboard.controller('NewContact', function($scope, NewContactFactory){
 	$scope.errors = NewContactFactory.getErrors();
 });
 
-dashboard.controller('MyContact', function($scope, $routeParams, MyContactFactory){
+dashboard.controller('MyContact', function($scope, $routeParams, $location, MyContactFactory){
 	MyContactFactory.getContactInfo($routeParams.id, function(data){
 		$scope.contact = data;
 	});
 	$scope.removeContact = function(id){
-		console.log(id);
 		MyContactFactory.removeContact(id);
+		$location.path('/');
 	};
 });
