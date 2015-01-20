@@ -1,15 +1,20 @@
 dashboard.controller('Contacts', function($scope, ContactFactory){
-	// $scope.addContact = function(){
-	// 	ContactFactory.addContact($scope.new_contact);
-	// };
 	ContactFactory.getContacts(function(data){
 		$scope.contacts = data;
 	});
-	// $scope.errors = ContactFactory.getErrors();
 });
 
 dashboard.controller('Main', function($scope, MainFactory){
-	$scope.pictures = contacts;
+	MainFactory.getContacts(function(data){
+		var array = data;
+		var pictures = [];
+		for(var i=0; i<8; i++){
+			var random = Math.floor(Math.random()*array.length);
+			pictures.push(array[random]);
+			array.splice(random, 1);
+		}
+		$scope.pictures = pictures;
+	});
 });
 
 dashboard.controller('NewContact', function($scope, NewContactFactory){
