@@ -71,6 +71,11 @@ img.contact_image {
 	display: inline-block;
 	vertical-align: top;
 }
+img.icon {
+	display: inline;
+	height: 25px;
+	width: 25px;
+}
 #action_plans {
 	background-color: yellow;
 	height: 100px;
@@ -83,6 +88,17 @@ img.contact_image {
 	background-color: pink;
 	outline: 1px solid red;
 	vertical-align: top;
+}
+.button {
+	color: white;
+	border: none;
+	border-radius: 3px;
+}
+.green {
+	background-color: green;
+}
+.red {
+	background-color: red;
 }
 
 /* Add Contact */

@@ -19,4 +19,7 @@ module.exports = function Routes(app){
 	app.get('/get_contact_info/:id', function(req, res){
 		dash.get_contact_info(req, res);
 	});
+	app.get('/remove_contact/:id', function(req, res){
+		dash.remove_contact(req, res);
+	});
 };

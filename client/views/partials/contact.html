@@ -3,13 +3,29 @@
         <div id="contact_collage">
           <img class="contact_image" ng-src="{{contact.picture}}">
         </div><!-- Comment to remove space
-     --><div id="contact_info" >
+     --><div id="contact_info">
           <h2 ng-bind="contact.first_name+' '+contact.last_name"></h2>
           <h4>Info: ...</h4>
           <p>Phone: 70251806942</p>
           <p>Address: 4600 Davis Ave S Apt B103</p>
-          <h4>Social Media Links:</p>
+          <img class="icon" src="/images/Facebook-icon.png">
+          <img class="icon" src="/images/Twitter-icon.png">
+          <img class="icon" src="/images/Instagram-icon.png">
+          <img class="icon" src="/images/LinkedIn-icon.png">
+          <img class="icon" src="/images/YouTube-icon.png">
+          <img class="icon" src="/images/GooglePlus-icon.png">
           <h4>Groups:</h4>
+          <img class="icon" src="/images/Facebook-icon.png">
+          <img class="icon" src="/images/Twitter-icon.png">
+          <img class="icon" src="/images/Instagram-icon.png">
+          <img class="icon" src="/images/LinkedIn-icon.png">
+          <img class="icon" src="/images/YouTube-icon.png">
+          <img class="icon" src="/images/GooglePlus-icon.png">
+          <p>
+            <button class="button green">Edit</button>
+            <!-- Need to create link to delete contact -->
+            <button ng-click="removeContact(contact._id)" class="button red">Delete</button>
+          </p>
         </div><!-- Comment to remove space
      --><div id="action_plans">
           <h3>Action Plan Tasks (The Que)</h3>
