@@ -37,6 +37,16 @@ module.exports = {
 			}
 		});
 	},
+	get_tasks: function(req, res){
+		Contact.find({}, { "tasks" : 1 }, function(err, results){
+			if(err){
+				console.log('Boo...');
+			} else {
+				console.log('Yay!');
+				res.send(results);
+			}
+		});
+	},
 	get_contact_info: function(req, res){
 		Contact.find({_id : req.params.id}, function(err, results){
 			if(err){

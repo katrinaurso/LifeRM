@@ -13,9 +13,19 @@ dashboard.controller('Main', function($scope, MainFactory){
 			pictures.push(array[random]);
 			array.splice(random, 1);
 		}
-		console.log(data.tasks);
 		$scope.contacts = pictures;
 	});
+	MainFactory.getTasks(function(data){
+		var tasks= [];
+		console.log(data);
+		for(var i=0; i<data.length; i++){
+			if(data[i].tasks.length > 0){
+				console.log(data[i].tasks);
+				tasks.push(data[i]);
+			}
+		}
+		$scope.tasks = tasks;
+	})
 });
 
 dashboard.controller('NewContact', function($scope, NewContactFactory){

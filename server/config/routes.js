@@ -16,6 +16,9 @@ module.exports = function Routes(app){
 	app.get('/get_pictures', function(req, res){
 		dash.get_pictures(req, res);
 	});
+	app.get('/get_tasks', function(req, res){
+		dash.get_tasks(req, res);
+	});
 	app.get('/get_contact_info/:id', function(req, res){
 		dash.get_contact_info(req, res);
 	});

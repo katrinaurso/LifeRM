@@ -18,6 +18,13 @@ dashboard.factory('MainFactory', function($http){
 			callback(contacts_main);
 		});
 	};
+	factory.getTasks = function(callback){
+		var tasks = [];
+		$http.get('/get_tasks').success(function(output){
+			tasks = output;
+			callback(tasks);
+		});
+	};
 	return factory;
 });
 
