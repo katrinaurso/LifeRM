@@ -55,6 +55,13 @@ module.exports = {
 				res.sendStatus(status);
 			}
 		});
+	},
+	edit_contact: function(req, res){
+		var data = req.body
+		var date = Date.now();
+		data.updated_at = date;
+		var query = { _id : data._id };
+		Contact.update(query , { $set : data }).exec();
 	}
 	// , upload: function(req, res){
 	// 	var form = new multiparty.Form();

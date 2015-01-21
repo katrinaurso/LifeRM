@@ -56,6 +56,18 @@ dashboard.factory('MyContactFactory', function($routeParams, $http){
 			callback(contact[0]);		
 		});
 	};
+	return factory;
+});
+
+dashboard.factory('EditContactFactory', function($routeParams, $http){
+	var factory = {};
+	var contact = [];
+	factory.getContactInfo = function(id, callback){
+		$http.get('/get_contact_info/'+id).success(function(output){
+			contact = output;
+			callback(contact[0]);		
+		});
+	};
 	factory.removeContact = function(id){
 		$http.get('/remove_contact/'+id);
 		for(var i = 0; i<contacts.length; i++){
@@ -64,5 +76,16 @@ dashboard.factory('MyContactFactory', function($routeParams, $http){
 			}
 		}
 	};
+	factory.editContact = function(id, info){
+		info._id = id;
+		$http.post('/edit_contact/', info).success(function(output){
+			for(var i=0; i<contacts.length; i++){
+				if(contacts[i]._id === id) {
+					contacts[i].first_name = info.first_name;
+					contacts[i].last_name = info.last_name;
+				}
+			}
+		});
+	}
 	return factory;
 });

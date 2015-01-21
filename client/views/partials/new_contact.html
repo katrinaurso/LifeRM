@@ -1,9 +1,13 @@
  		<div id="new_contact" ng-controller="NewContact">
           <h1>Add A New Contact</h1>
           <form ng-submit="addContact()">
-            <input type="text" ng-model="new_contact.first_name" placeholder="Contact First Name">
-            <input type="text" ng-model="new_contact.last_name" placeholder="Contact Last Name">
-            <input type="text" ng-model="new_contact.phone" placeholder="Contact Phone Number">
+            <input class="add" type="text" ng-model="new_contact.first_name" placeholder="Contact First Name">
+            <input class="add" type="text" ng-model="new_contact.last_name" placeholder="Contact Last Name">
+            <input class="add" type="text" ng-model="new_contact.phone" placeholder="Contact Phone Number">
+            <input class="add" type="text" ng-model="new_contact.address.street" placeholder="Street Address">
+            <input class="add" type="text" ng-model="new_contact.address.city" placeholder="City">
+            <input class="add" type="text" ng-model="new_contact.address.state" placeholder="State">
+            <input class="add" type="text" ng-model="new_contact.address.zip" placeholder="Zip">
             <input type="submit" value="Add">
             <p ng-repeat="error in errors" ng-bind="error.message"></p>
           </form>

@@ -12,6 +12,10 @@ dashboard.config(function($routeProvider){
 	.when('/contact/:id', {
 		templateUrl: 'views/partials/contact.html',
 		controller: 'MyContact'
+	})
+	.when('/edit_contact/:id', {
+		templateUrl: 'views/partials/edit_contact.html',
+		controller: 'EditContact'
 	});
 });
 

@@ -37,7 +37,6 @@ body {
 	height: 150px;
 	background-color: yellow;
 	display: block;
-	outline: 1px solid red;
 /*	padding: 10px;
 */}
 h3 {
@@ -47,8 +46,6 @@ h3 {
 	height: 150px;
 	background-color: pink;
 	vertical-align: top;
-	outline: 1px solid red;
-
 }
 
 /* View Contact */
@@ -71,17 +68,26 @@ img.contact_image {
 	display: inline-block;
 	vertical-align: top;
 }
+p.contact_table {
+	padding: 0;
+	margin: 0;
+}
 img.icon {
 	display: inline;
 	height: 25px;
 	width: 25px;
 }
-#action_plans {
-	background-color: yellow;
+#action_plans {	
+	background-color: lightyellow;
 	height: 100px;
 	display: block;
-	vertical-align: top;
-	outline: 1px solid red;
+	overflow-y: auto;
+}
+.action_plan {
+	background-color: orange;
+	height: 50px;
+	width: 125px;
+	display: inline-block;
 }
 #notes_docs {
 	height: 200px;
@@ -101,11 +107,25 @@ img.icon {
 	background-color: red;
 }
 
+/* Edit Contact */
+.inline {
+	width: 65px;
+	display: inline-block;
+}
+input.city {
+	width: 75px;
+}
+input.state {
+	width: 50px;
+}
 /* Add Contact */
 #new_contact {
 	padding: 20px;
 	background-color: lightblue;
 	outline: 1px solid red;
+}
+input.add {
+	display: block;
 }
 
 /* Contacts side bar */

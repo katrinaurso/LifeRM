@@ -24,12 +24,23 @@ dashboard.controller('NewContact', function($scope, NewContactFactory){
 	$scope.errors = NewContactFactory.getErrors();
 });
 
-dashboard.controller('MyContact', function($scope, $routeParams, $location, MyContactFactory){
+dashboard.controller('MyContact', function($scope, $routeParams, MyContactFactory){
 	MyContactFactory.getContactInfo($routeParams.id, function(data){
 		$scope.contact = data;
 	});
+});
+
+dashboard.controller('EditContact', function($scope, $routeParams, $location, EditContactFactory){
+	EditContactFactory.getContactInfo($routeParams.id, function(data){
+		$scope.contact = data;
+	});
+	$scope.editContact = function(id){
+		console.log(id);
+		EditContactFactory.editContact(id, $scope.edit_contact);
+		$location.path('/contact/'+id);
+	};
 	$scope.removeContact = function(id){
-		MyContactFactory.removeContact(id);
+		EditContactFactory.removeContact(id);
 		$location.path('/');
 	};
 });

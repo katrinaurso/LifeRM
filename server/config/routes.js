@@ -22,4 +22,7 @@ module.exports = function Routes(app){
 	app.get('/remove_contact/:id', function(req, res){
 		dash.remove_contact(req, res);
 	});
+	app.post('/edit_contact/', function(req, res){
+		dash.edit_contact(req, res);
+	});
 };
