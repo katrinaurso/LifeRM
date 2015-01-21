@@ -61,7 +61,15 @@ module.exports = {
 		var date = Date.now();
 		data.updated_at = date;
 		var query = { _id : data._id };
-		Contact.update(query , { $set : data }).exec();
+		Contact.update(query, { $set : data }).exec();
+	},
+	add_task: function(req, res){
+		var query = { _id : req.body.id };
+		var data = {};
+		data.name = req.body.name;
+		var date = Date.parse(req.body.deadline);
+		data.deadline = date;
+		Contact.update(query, { $addToSet : { tasks: data }}).exec();
 	}
 	// , upload: function(req, res){
 	// 	var form = new multiparty.Form();

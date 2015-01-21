@@ -12,8 +12,8 @@
             </tr>
               <td>Address: </td>
               <td>
-                <p class="contact_table" ng-bind="contact.address.street"></p>
-                <p class="contact_table" ng-bind="contact.address.city+', '+contact.address.state"></p>
+                <p class="flat" ng-bind="contact.address.street"></p>
+                <p class="flat" ng-bind="contact.address.city+', '+contact.address.state"></p>
               </td>
           </table>
           <a href="#"><img class="icon" src="/images/Facebook-icon.png"></a>
@@ -33,12 +33,17 @@
         </div><!-- Comment to remove space
      --><div id="action_plans">
           <h3>Action Plan</h3>
+          <div class="action_plan" ng-repeat="task in tasks | orderBy: 'task.deadline'">
+            <h4 class="flat" ng-bind="task.name"></h4>
+            <p class="flat" ng-bind="task.deadline | date: 'M/dd/yy'"></p>
+            <a href="completeTask()"><button>Completed!</button></a>
+          </div>
           <h1 class="letter add">+</h1>
-          <div class="action_plan"></div>
-          <div class="action_plan"></div>
-          <div class="action_plan"></div>
-          <div class="action_plan"></div>
-          <div class="action_plan"></div>
+          <form ng-submit="addTask(contact._id)">
+            <input type="text" ng-model="new_task.name">
+            <input type="date" ng-model="new_task.deadline">
+            <button type="submit">Add Task</button>
+          </form>
         </div>
         <div id="notes_docs">
           <h3>Upcomming Reminders</h3>

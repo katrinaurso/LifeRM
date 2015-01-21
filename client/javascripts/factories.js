@@ -50,10 +50,17 @@ dashboard.factory('NewContactFactory', function($http){
 dashboard.factory('MyContactFactory', function($routeParams, $http){
 	var factory = {};
 	var contact = [];
+	var tasks = [];
 	factory.getContactInfo = function(id, callback){
 		$http.get('/get_contact_info/'+id).success(function(output){
 			contact = output;
 			callback(contact[0]);		
+		});
+	};
+	factory.addTask = function(id, info){
+		info.id = id;
+		$http.post('/add_task/', info).success(function(output){
+			console.log(output);
 		});
 	};
 	return factory;

@@ -12,6 +12,11 @@ var ContactSchema = new mongoose.Schema({
 		zip: String
 	},
 	picture: {type: String, default: '/images/test.jpg'},
+	tasks: [{
+		name: String,
+		deadline: Date,
+		created_at: { type: Date, default: Date.now }
+	}],
  	created_at: { type: Date, default: Date.now },
  	updated_at: { type: Date, default: Date.now },
 	hidden: Boolean

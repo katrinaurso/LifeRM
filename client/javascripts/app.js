@@ -20,6 +20,8 @@ dashboard.config(function($routeProvider){
 });
 
 var contacts = [];
+var reminders = [];
+var tasks = [];
 /// Test Section /////
 // var dashboard = angular.module('dashboard', ['ui-router']);
 // dashboard.config(function($stateProvider, $urlRouterProvider){

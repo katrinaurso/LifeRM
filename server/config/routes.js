@@ -25,4 +25,7 @@ module.exports = function Routes(app){
 	app.post('/edit_contact/', function(req, res){
 		dash.edit_contact(req, res);
 	});
+	app.post('/add_task/', function(req, res){
+		dash.add_task(req, res);
+	});
 };

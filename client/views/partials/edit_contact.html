@@ -15,16 +15,18 @@
               <td ng-bind="contact.phone"></td>
               <td><input type="text" ng-model="edit_contact.phone"></td>
             </tr>
+            <tr>
               <td>Address: </td>
               <td>
-                <p class="contact_table" ng-bind="contact.address.street">
-                <p class="contact_table" ng-bind="contact.address.city+', '+contact.address.state">
+                <p class="flat" ng-bind="contact.address.street">
+                <p class="flat" ng-bind="contact.address.city+', '+contact.address.state">
               </td>
               <td>
                 <input type="text" ng-model="edit_contact.address.street">
                 <input class="inline city" type="text" ng-model="edit_contact.address.city">
                 <input  class="inline state" type="text" ng-model="edit_contact.address.state">
               </td>
+            </tr>
           </table>
           <a href="#"><img class="icon" src="/images/Facebook-icon.png"></a>
           <img class="icon" src="/images/Twitter-icon.png">

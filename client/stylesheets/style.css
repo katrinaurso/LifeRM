@@ -68,7 +68,7 @@ img.contact_image {
 	display: inline-block;
 	vertical-align: top;
 }
-p.contact_table {
+.flat {
 	padding: 0;
 	margin: 0;
 }
@@ -78,16 +78,23 @@ img.icon {
 	width: 25px;
 }
 #action_plans {	
-	background-color: lightyellow;
+	background-color: white;
 	height: 100px;
 	display: block;
 	overflow-y: auto;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 .action_plan {
 	background-color: orange;
-	height: 50px;
-	width: 125px;
+	min-height: 50px;
+	width: 110px;
 	display: inline-block;
+	vertical-align: top;
+	margin: 5px;
+	outline: 1px solid black;
+	padding: 5px;
+	text-align: center
 }
 #notes_docs {
 	height: 200px;
