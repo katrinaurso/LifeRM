@@ -1,6 +1,6 @@
 dashboard.factory('ContactFactory', function($http){
 	var factory = {};
-	factory.getContacts = function(callback){ // Something is super not right here...
+	factory.getContacts = function(callback){
 		$http.get('/get_contacts').success(function(output){
 			contacts = output;
 			callback(contacts);
@@ -12,7 +12,7 @@ dashboard.factory('ContactFactory', function($http){
 dashboard.factory('MainFactory', function($http){
 	var factory = {};
 	var contacts_main = [];
-	factory.getContacts = function(callback){ // Something is super not right here...
+	factory.getContacts = function(callback){
 		$http.get('/get_contacts').success(function(output){
 			contacts_main = output;
 			callback(contacts_main);
@@ -42,11 +42,13 @@ dashboard.factory('NewContactFactory', function($http){
 			}
 		}
 		$http.post('/add_contact', info).success(function(output){
+			output = output.replace(/"/g, "");
 			contacts.push({
 				_id: output,
 				first_name: info.first_name,
 				last_name: info.last_name,
-				picture: '/images/test.jpg'
+				picture: '/images/test.jpg',
+				tasks: []
 			});
 		});	
 		errors = [];		
@@ -57,7 +59,6 @@ dashboard.factory('NewContactFactory', function($http){
 dashboard.factory('MyContactFactory', function($routeParams, $http){
 	var factory = {};
 	var contact = [];
-	var tasks = [];
 	factory.getContactInfo = function(id, callback){
 		$http.get('/get_contact_info/'+id).success(function(output){
 			contact = output;
@@ -67,7 +68,7 @@ dashboard.factory('MyContactFactory', function($routeParams, $http){
 	factory.addTask = function(id, info){
 		info.id = id;
 		$http.post('/add_task/', info).success(function(output){
-			console.log(output);
+			contact.tasks.push(output);
 		});
 	};
 	return factory;
@@ -100,6 +101,6 @@ dashboard.factory('EditContactFactory', function($routeParams, $http){
 				}
 			}
 		});
-	}
+	};
 	return factory;
 });

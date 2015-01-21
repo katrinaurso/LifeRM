@@ -40,9 +40,8 @@ module.exports = {
 	get_tasks: function(req, res){
 		Contact.find({}, { "tasks" : 1 }, function(err, results){
 			if(err){
-				console.log('Boo...');
+				res.send(err);
 			} else {
-				console.log('Yay!');
 				res.send(results);
 			}
 		});
@@ -57,7 +56,6 @@ module.exports = {
 		});
 	},
 	remove_contact: function(req, res){
-		console.log(req.params.id);
 		Contact.remove({_id: req.params.id}, function(err, status){
 			if(err) {
 				res.send(err);

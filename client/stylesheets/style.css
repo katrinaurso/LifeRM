@@ -33,12 +33,13 @@ body {
 	vertical-align: top;
 }
 #action_plan_tasks {
-	height: 149px;
+	height: 129px;
 	display: block;
 	background-color: white;
 	border-top: 1px solid black;
-/*	padding: 10px;
-*/}
+	overflow: hidden;
+	padding: 10px;
+}
 h3 {
 	margin-top: 0;
 }
@@ -46,6 +47,10 @@ h3 {
 	height: 150px;
 	background-color: white;
 	vertical-align: top;
+	padding-left: 10px;
+}
+.alert {
+	color: red;
 }
 
 /* View Contact */
@@ -92,15 +97,20 @@ img.icon {
 	border-bottom: 1px solid black;
 }
 .action_plan {
-	background-color: orange;
+	background-color: yellow;
+	border-radius: 0 0 5px 0;
 	min-height: 50px;
 	width: 110px;
 	display: inline-block;
 	vertical-align: top;
 	margin: 5px;
-	outline: 1px solid black;
 	padding: 5px;
 	text-align: center
+}
+.check {
+	background-color: yellow;
+	color: gray;
+	border: none;
 }
 #notes_docs {
 	height: 198px;
@@ -115,7 +125,7 @@ img.icon {
 }
 .green {
 	background-color: green;
-	margin-left: 150px;
+	margin-left: 125px;
 }
 .red {
 	background-color: red;

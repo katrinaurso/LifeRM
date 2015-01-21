@@ -33,7 +33,7 @@
           <div class="action_plan" ng-repeat="task in tasks | orderBy: 'task.deadline'">
             <h4 class="flat" ng-bind="task.name"></h4>
             <p class="flat" ng-bind="task.deadline | date: 'M/dd/yy'"></p>
-            <a href="completeTask()"><button>Completed!</button></a>
+            <a href="completeTask()"><input type="checkbox"><button class="check">Completed!</button></a>
           </div>
           <h1 class="letter add">+</h1>
           <form ng-submit="addTask(contact._id)">
@@ -43,8 +43,6 @@
           </form>
         </div>
         <div id="notes_docs">
-          <h3>Upcomming Reminders</h3>
-          <input type="checkbox">Patrick's Birthday <span class="alert">4 days</span>
-        </div>
-     
+          <h3>Notes and Documents</h3>
+        </div> 
       </div>

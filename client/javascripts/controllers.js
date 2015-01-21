@@ -18,16 +18,25 @@ dashboard.controller('Main', function($scope, MainFactory){
 	MainFactory.getTasks(function(data){
 		var tasks= [];
 		var task = {};
-		console.log(data);
+		var action_plan = [];
+		var reminders = [];
 		for(var i=0; i<data.length; i++){
 			if(data[i].tasks.length > 0){
-				task._id = data[i]._id;
-				console.log(data[i].tasks);
-				tasks.push(data[i]);
+				for(var k=0; k<data[i].tasks.length; k++){
+					tasks.push(data[i].tasks[k]);
+				}
 			}
 		}
-		$scope.tasks = tasks;
-	})
+		for(var j=0; j<tasks.length; j++){
+			if(tasks[j].deadline >= "2015-01-20" && tasks[j].deadline < "2015-01-23") {
+				action_plan.push(tasks[j]);
+			} else if(tasks[j].deadline >= "2015-01-23") {
+				reminders.push(tasks[j]);
+			}
+		}
+		$scope.reminders = reminders;
+		$scope.action_plan = action_plan;
+	});
 });
 
 dashboard.controller('NewContact', function($scope, $location, NewContactFactory){
@@ -38,7 +47,7 @@ dashboard.controller('NewContact', function($scope, $location, NewContactFactory
 	$scope.errors = NewContactFactory.getErrors();
 });
 
-dashboard.controller('MyContact', function($scope, $routeParams, MyContactFactory){
+dashboard.controller('MyContact', function($scope, $routeParams, $location, MyContactFactory){
 	MyContactFactory.getContactInfo($routeParams.id, function(data){
 		$scope.contact = data;
 		$scope.tasks = data.tasks;
@@ -46,7 +55,8 @@ dashboard.controller('MyContact', function($scope, $routeParams, MyContactFactor
 	});
 	$scope.addTask = function(id){
 		MyContactFactory.addTask(id, $scope.new_task);
-	}
+		$location.path('/');
+	};
 });
 
 dashboard.controller('EditContact', function($scope, $routeParams, $location, EditContactFactory){

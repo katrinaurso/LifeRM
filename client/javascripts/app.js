@@ -22,16 +22,3 @@ dashboard.config(function($routeProvider){
 var contacts = [];
 var reminders = [];
 var tasks = [];
-/// Test Section /////
-// var dashboard = angular.module('dashboard', ['ui-router']);
-// dashboard.config(function($stateProvider, $urlRouterProvider){
-// 	$urlRouterProvider.otherwise('/home');
-// 	$stateProvider
-// 		.state('home', {
-// 			url: '/',
-// 			templateUrl: 'partials/main.html'
-// 		});
-// });
-//  dashboard.config(['$compileProvider', function($compileProvider) {
-//     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
-// }]);
