@@ -17,9 +17,11 @@ dashboard.controller('Main', function($scope, MainFactory){
 	});
 	MainFactory.getTasks(function(data){
 		var tasks= [];
+		var task = {};
 		console.log(data);
 		for(var i=0; i<data.length; i++){
 			if(data[i].tasks.length > 0){
+				task._id = data[i]._id;
 				console.log(data[i].tasks);
 				tasks.push(data[i]);
 			}
@@ -28,9 +30,10 @@ dashboard.controller('Main', function($scope, MainFactory){
 	})
 });
 
-dashboard.controller('NewContact', function($scope, NewContactFactory){
+dashboard.controller('NewContact', function($scope, $location, NewContactFactory){
 	$scope.addContact = function(){
 		NewContactFactory.addContact($scope.new_contact);
+		$location.path('/');
 	};
 	$scope.errors = NewContactFactory.getErrors();
 });

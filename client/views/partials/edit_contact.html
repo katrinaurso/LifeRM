@@ -4,43 +4,41 @@
           <img class="contact_image" ng-src="{{contact.picture}}">
         </div><!-- Comment to remove space
      --><div id="contact_info">
-     <button ng-click="removeContact(contact._id)" class="button red">Delete</button>
+          <h2 class="inline contact" ng-bind="contact.first_name+' '+contact.last_name"></h2>
+          <button ng-click="removeContact(contact._id)" class="button red">Delete</button>
           <form ng-submit="editContact(contact._id)">
-          <h2 class="inline" ng-bind="contact.first_name+' '+contact.last_name"></h2>
-          <input class="inline" type="text" ng-model="edit_contact.first_name">
-          <input class="inline" type="text" ng-model="edit_contact.last_name">
           <table>
             <tr>
+              <td>First Name: </td>
+              <td><input class="inline" type="text" ng-model="edit_contact.first_name" placeholder="{{contact.first_name}}"></td>
+            </tr>
+            <tr>
+              <td>Last Name: </td>
+              <td><input class="inline" type="text" ng-model="edit_contact.last_name" placeholder="{{contact.last_name}}"></td>
+            </tr>
+            <tr>
               <td>Phone: </td>
-              <td ng-bind="contact.phone"></td>
-              <td><input type="text" ng-model="edit_contact.phone"></td>
+              <td><input type="text" ng-model="edit_contact.phone" placeholder="{{contact.phone}}"></td>
             </tr>
             <tr>
               <td>Address: </td>
               <td>
-                <p class="flat" ng-bind="contact.address.street">
-                <p class="flat" ng-bind="contact.address.city+', '+contact.address.state">
-              </td>
-              <td>
-                <input type="text" ng-model="edit_contact.address.street">
-                <input class="inline city" type="text" ng-model="edit_contact.address.city">
-                <input  class="inline state" type="text" ng-model="edit_contact.address.state">
+                <input type="text" ng-model="edit_contact.address.street" placeholder="{{contact.address.street}}">
+                <input class="inline city" type="text" ng-model="edit_contact.address.city" placeholder="{{contact.address.city}}">
+                <input  class="inline state" type="text" ng-model="edit_contact.address.state" placeholder="{{contact.address.state}}">
               </td>
             </tr>
           </table>
-          <a href="#"><img class="icon" src="/images/Facebook-icon.png"></a>
-          <img class="icon" src="/images/Twitter-icon.png">
-          <img class="icon" src="/images/Instagram-icon.png">
-          <img class="icon" src="/images/LinkedIn-icon.png">
-          <img class="icon" src="/images/YouTube-icon.png">
-          <img class="icon" src="/images/GooglePlus-icon.png">
+          <div class="social">
+            <a href="#"><img class="icon" src="/images/Facebook-icon.png"></a>
+            <img class="icon" src="/images/Twitter-icon.png">
+            <img class="icon" src="/images/Instagram-icon.png">
+            <img class="icon" src="/images/LinkedIn-icon.png">
+            <img class="icon" src="/images/YouTube-icon.png">
+            <img class="icon" src="/images/GooglePlus-icon.png">
+          </div>
           <h4>Groups:</h4>
-          <img class="icon" src="/images/Facebook-icon.png">
-          <img class="icon" src="/images/Twitter-icon.png">
-          <img class="icon" src="/images/Instagram-icon.png">
-          <img class="icon" src="/images/LinkedIn-icon.png">
-          <img class="icon" src="/images/YouTube-icon.png">
-          <img class="icon" src="/images/GooglePlus-icon.png">
+          <a href="#">Family</a>
           <p>
             <input class="button green" type="submit" value="Submit Changes!">
             <!-- <input type="hidden" ng-model="edit_contact._id" value="{{contact._id}}"> -->

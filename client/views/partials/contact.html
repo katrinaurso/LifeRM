@@ -4,7 +4,7 @@
           <img class="contact_image" ng-src="{{contact.picture}}">
         </div><!-- Comment to remove space
      --><div id="contact_info">
-          <h2 ng-bind="contact.first_name+' '+contact.last_name"></h2>
+          <h2 class="flat" ng-bind="contact.first_name+' '+contact.last_name"></h2>
           <table>
             <tr>
               <td>Phone: </td>
@@ -16,19 +16,16 @@
                 <p class="flat" ng-bind="contact.address.city+', '+contact.address.state"></p>
               </td>
           </table>
-          <a href="#"><img class="icon" src="/images/Facebook-icon.png"></a>
-          <img class="icon" src="/images/Twitter-icon.png">
-          <img class="icon" src="/images/Instagram-icon.png">
-          <img class="icon" src="/images/LinkedIn-icon.png">
-          <img class="icon" src="/images/YouTube-icon.png">
-          <img class="icon" src="/images/GooglePlus-icon.png">
+          <div class="social">
+            <a href="#"><img class="icon" src="/images/Facebook-icon.png"></a>
+            <img class="icon" src="/images/Twitter-icon.png">
+            <img class="icon" src="/images/Instagram-icon.png">
+            <img class="icon" src="/images/LinkedIn-icon.png">
+            <img class="icon" src="/images/YouTube-icon.png">
+            <img class="icon" src="/images/GooglePlus-icon.png">
+          </div>
           <h4>Groups:</h4>
-          <img class="icon" src="/images/Facebook-icon.png">
-          <img class="icon" src="/images/Twitter-icon.png">
-          <img class="icon" src="/images/Instagram-icon.png">
-          <img class="icon" src="/images/LinkedIn-icon.png">
-          <img class="icon" src="/images/YouTube-icon.png">
-          <img class="icon" src="/images/GooglePlus-icon.png">
+          <a href="#">Family</a>
           <p><a ng-href="#/edit_contact/{{contact._id}}"><button class="button green">Edit</button></a></p>
         </div><!-- Comment to remove space
      --><div id="action_plans">
